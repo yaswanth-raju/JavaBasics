@@ -25,3 +25,7 @@ public class LamdaExpression1 {
 
     }
 }
+
+abstract class Abclass{
+    abstract void fun();
+}
