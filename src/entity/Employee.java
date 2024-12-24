@@ -1,6 +1,7 @@
 package entity;
 
-public class Employee {
+public class Employee  implements Comparable<Employee>{
+
     Integer id;
     Integer salary;
     String name;
@@ -13,7 +14,9 @@ public class Employee {
                 ", name='" + name + '\'' +
                 '}';
     }
-
+    public Employee(){
+        System.out.println("creating employee");
+    }
     public Employee(Integer id, Integer salary, String name) {
         this.id = id;
         this.salary = salary;
@@ -42,5 +45,10 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Employee employee) {
+        return this.getName().compareTo(employee.getName());
     }
 }
