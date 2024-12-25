@@ -11,7 +11,6 @@ public class DefaultMethod {
         obj.defaultFun2();
         obj.nonStatFun();
 
-
         OverClass childObj = new OverClass();
         childObj.statFun();
         childObj.defaultFun();

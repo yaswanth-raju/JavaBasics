@@ -1,7 +1,7 @@
 package java8.streams;
 
+import collections_util.EmployeeUtil;
 import entity.Employee;
-import util.Utility;
 
 import java.util.Comparator;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class SortingCollection {
     public static void main(String[] args) {
-        List<Employee> employeeList = Utility.getEmployesList();
+        List<Employee> employeeList = EmployeeUtil.getEmployees();
         sortBySalary(employeeList);
         sortByName(employeeList);
         minMaxSalary(employeeList);

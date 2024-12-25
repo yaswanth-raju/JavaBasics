@@ -21,7 +21,7 @@ public class CovariantExample {
 public static void main(String[] args) {
 A a = new A();
 a.get();
-A b = new B();
+A b = new B();  //The covariant return type specifies that the return type may vary in the same direction as the subclass.
 b.get();
 }
 }

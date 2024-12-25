@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class EmployeeUtil {
-    public static List<Employee> getEemployees(){
+    public static List<Employee> getEmployees(){
         Employee emp = new Employee(1,10000,"raja");
         Employee emp2 = new Employee(2,20000, "Kumar");
         Employee emp3 = new Employee(3,30000, "Apparao");
