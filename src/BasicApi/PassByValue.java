@@ -9,7 +9,7 @@ public class PassByValue {
         System.out.println("Before: " + person1.name);
         System.out.println("Identity Hash Code: " + System.identityHashCode(person1)); // Identity Hash Code
 
-        modifyObject(person1);
+        modifyObject(person1);  //passing other variable with same memory location
         System.out.println("After modifyObject: " + person1.name);
         System.out.println("Identity Hash Code: " + System.identityHashCode(person1)); // Identity Hash Code
 

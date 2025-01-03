@@ -1,8 +1,9 @@
 package java8.streams;
 
+import entity.Student;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PrallelStream {
     public static void main(String[] args) {
@@ -13,26 +14,5 @@ public class PrallelStream {
         list.parallelStream().forEach(e->System.out.println(e+" ,"+Thread.currentThread()));
         System.out.println("\n Normal stream using single thread:");
         list.stream().forEach(e->System.out.println(e+" ,"+Thread.currentThread()));
-    }
-}
-class Student{
-    int id;
-    String name;
-    String department;
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", department='" + department + '\'' +
-                '}';
-    }
-
-    public Student(int id, String name, String department) {
-        this.id = id;
-        this.name = name;
-        this.department = department;
-
     }
 }

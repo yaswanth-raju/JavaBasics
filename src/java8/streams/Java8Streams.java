@@ -1,5 +1,6 @@
 package java8.streams;
 
+import collections_util.EmployeeUtil;
 import entity.Employee;
 
 import java.util.Arrays;
@@ -8,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class Java8Streams {
     public static void main(String[] args) {
-        List<Employee> employeeArrayList=updateEmpList();
+        List<Employee> employeeArrayList= EmployeeUtil.getEmployees();
         System.out.println("Initial employeeArrayList"+ employeeArrayList.size());
 
 //        forEachUpdateSalary(employeeArrayList);
@@ -37,18 +38,6 @@ public class Java8Streams {
                 .filter(e->e.getSalary()<15000)   //Whose salaray less than 15K
                 .forEach(e -> e.setSalary(e.getSalary() + 2000));   //update bonus salary with 2K;no need to save to other object
         System.out.println("Employees after update salary => "+employeeArrayList);
-    }
-    private static List<Employee> updateEmpList() {
-        Employee emp = new Employee(1,10000,"raja");
-        Employee emp2 = new Employee(2,20000, "Kumar");
-        Employee emp3 = new Employee(3,30000, "Apparao");
-        Employee emp4 = new Employee(4,40000, "Somesh");
-        Employee emp5 = new Employee(5,12000, "Polireddy");
-        Employee emp6 = new Employee(6,30000, "Anji");
-        Employee emp7 = new Employee(7,90000, "appanna");
-        List<Employee> employeeArrayList = Arrays.asList(new Employee[]{emp2, emp, emp3, emp4, emp5,emp6,emp7});
-        employeeArrayList.stream().collect(Collectors.groupingBy(Employee::getSalary,Collectors.counting()));
-        return employeeArrayList ;
     }
 }
 

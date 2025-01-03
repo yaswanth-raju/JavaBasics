@@ -13,5 +13,7 @@ public class StringFunctions {
         System.out.println(" ".isEmpty());
         System.out.println(""+str.getBytes(StandardCharsets.UTF_8)[0]);
         System.out.println(str.toCharArray()[0]);
+        System.out.println(str.lines());
+
     }
 }

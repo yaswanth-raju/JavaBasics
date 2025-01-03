@@ -12,7 +12,6 @@ public class SortingCollection {
         List<Employee> employeeList = EmployeeUtil.getEmployees();
         sortBySalary(employeeList);
         sortByName(employeeList);
-        minMaxSalary(employeeList);
     }
     private static void sortByName(List<Employee> employeeArrayList) {
         Comparator<Employee> comparator = (a, b)->a.getName().compareTo(b.getName());
@@ -20,22 +19,11 @@ public class SortingCollection {
                 .sorted(comparator)
                 .forEach(System.out::print);
     }
-   static Comparator<Employee> salaryComparator = (e1, e2) -> e1.getSalary().compareTo(e2.getSalary());
     private static void sortBySalary(List<Employee> employeeArrayList) {
-
+        Comparator<Employee> salaryComparator=Comparator.comparing(Employee::getSalary);
         employeeArrayList.stream()
                 .sorted(salaryComparator)
                 .forEach(System.out::print);
     }
-    private static void minMaxSalary(List<Employee> employeeArrayList) {
 
-        Optional<Employee> maxSalary = employeeArrayList.stream()
-                .max(salaryComparator);
-        Optional<Employee> minSalary = employeeArrayList.stream()
-                .min(salaryComparator);
-        Employee minSalaryEmp = minSalary.isPresent() ? minSalary.get() : null;
-        Employee employee = maxSalary.isPresent() ? maxSalary.get() : null;
-        System.out.println("\n min salary = name = " + minSalaryEmp.getName() + " salary = " + minSalaryEmp.getSalary());
-        System.out.println("\n max salary = name = " + employee.getName() + " salary = " + employee.getSalary());
-    }
 }
