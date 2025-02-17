@@ -1,4 +1,4 @@
-package InterviewPrograms.stringProblems;
+package InterviewPrograms.stringProblems.beforeJava8;
 
 public class CharFrequencyUsingSB {
     public static void main(String[] args) {

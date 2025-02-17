@@ -15,7 +15,8 @@ public class Reduce {
     }
     void reduceStr(String ...strs){
         String str = "abcdefg";
-        String str2= Arrays.stream(str.split("")).reduce("done ",String::concat);
+        String[] strArr = str.split("");
+        String str2= Arrays.stream(strArr).reduce("done ",String::concat);
         System.out.println(" >>str2 >>"+str2);
     }
 

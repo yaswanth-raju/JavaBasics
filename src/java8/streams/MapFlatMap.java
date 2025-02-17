@@ -18,7 +18,9 @@ public class MapFlatMap {
                 .flatMap(e->
                         e.stream()
                         .filter(Predicate.not(z->z.getName().isEmpty()))
+                                .map(item->item.getName())
                 )
+
                 .forEach(System.out::println);
     }
 }

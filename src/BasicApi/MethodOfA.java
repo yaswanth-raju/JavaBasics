@@ -1,12 +1,12 @@
-package InterviewPrograms.ProblemSovling;
+package BasicApi;
 
 public class MethodOfA {
     public static void main(String[] args) {
-        B b= new B();
+        Ba b= new Ba();
         b.methodA();
     }
 }
-class B{
+class Ba{
     int methodA(){
         return  true? null:0;
 

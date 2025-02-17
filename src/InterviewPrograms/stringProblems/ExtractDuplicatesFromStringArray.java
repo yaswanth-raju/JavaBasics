@@ -16,13 +16,12 @@ public class ExtractDuplicatesFromStringArray {
         Map<String, List<String>> map = list.stream().collect(Collectors.groupingBy(obj -> {
             return obj.substring(0, 2);
         }));
+
+
         System.out.println(map);
 
-        map = list.stream().collect(Collectors.groupingBy(Function.identity()));
-        System.out.println(map);
 
         System.out.println(IntStream.of(1,3,4,5)
-//                .sum());
                 .reduce((a,b)->a+b).getAsInt());
     }
 

@@ -1,4 +1,4 @@
-package InterviewPrograms.ProblemSovling;
+package java8;
 
 import java.util.Arrays;
 import java.util.Comparator;

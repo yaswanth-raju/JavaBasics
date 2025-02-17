@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class CountRepeatedStringCount {
     public static void main(String[] args) {
         List<String > list =ArrayListUtil.getListOfRandomStrings();
+        System.out.println("Random Strings: "+list);
         Map<String, List<String>> out = list.stream().collect(Collectors.groupingBy(item -> {
             char[] arr = item.toCharArray();
             Arrays.sort(arr);

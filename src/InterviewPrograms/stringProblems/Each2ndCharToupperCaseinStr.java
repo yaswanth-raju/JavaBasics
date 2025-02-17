@@ -29,13 +29,13 @@ public class Each2ndCharToupperCaseinStr {
 
         String str="hi yaswanth how are you ?";
         String retStr = Arrays.stream(str.split(" ")).map(obj -> {
-            String obj2="";
+            String str2="";
             if (obj.length() >= 2) {
-                obj2=obj.replace(String.valueOf(obj.charAt(1)), String.valueOf(obj.charAt(1)).toUpperCase());
+                str2=obj.replace(String.valueOf(obj.charAt(1)), String.valueOf(obj.charAt(1)).toUpperCase());
             }else{
-                obj2=obj;
+                str2=obj;
             }
-            return obj2;
+            return str2;
         }).collect(Collectors.joining(" "));
         System.out.println(retStr);
     }

@@ -6,29 +6,34 @@ import entity.Employee;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class Java8Streams {
+public class SortBy {
     public static void main(String[] args) {
         List<Employee> employeeArrayList= EmployeeUtil.getEmployees();
         System.out.println("Initial employeeArrayList"+ employeeArrayList.size());
 
 //        forEachUpdateSalary(employeeArrayList);
-        mapEmployeNamesStartWithA(employeeArrayList);
+//        mapEmployeNamesStartWithA(employeeArrayList);
         sortBySalary(employeeArrayList);
 
 //        System.out.println("Final employeeArrayList"+ employeeArrayList);
     }
 
     private static void mapEmployeNamesStartWithA(List<Employee> employeeArrayList) {
-        employeeArrayList.stream()
-                .filter(e->e.getName().startsWith("A")) //only char case
+        Stream<Employee> myStream = employeeArrayList.stream();
+
+        myStream .filter(e->e.getName().startsWith("A")) //only char case
                 .map(e->e.getName())    //Map obj to name
                 .forEach(System.out::println);
+        employeeArrayList.stream().forEach(System.out::println);
     }
     private static void sortBySalary(List<Employee> employeeArrayList) {
-        employeeArrayList.stream()
-                .sorted((e2,e1)->e1.getSalary().compareTo(e2.getSalary()))
-                .forEach(System.out::print);
+        List<Employee> outlist = employeeArrayList.stream()
+                .sorted((e2, e1) -> e1.getSalary().compareTo(e2.getSalary()))
+                .peek(System.out::print)
+                .collect(Collectors.toList());
+
     }
 
 
