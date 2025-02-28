@@ -1,5 +1,9 @@
 package InterviewPrograms.ProblemSovling;
-
+/*
+* You have 2 wood pieces
+* i want to make an square frame
+* now identify maximum square size
+* */
 public class WoodenPieces {
     public static void main(String[] args) {
         maximumSide(13,11);

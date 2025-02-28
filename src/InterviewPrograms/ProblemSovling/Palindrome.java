@@ -1,5 +1,7 @@
 package InterviewPrograms.ProblemSovling;
-
+/*output:
+Check String palindrome or not
+* */
 public class Palindrome {
     public static void main(String[] args) {
         String str="civic";

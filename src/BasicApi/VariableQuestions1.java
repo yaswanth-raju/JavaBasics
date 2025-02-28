@@ -1,4 +1,4 @@
-package InterviewPrograms.ProblemSovling;
+package BasicApi;
 
 public class VariableQuestions1 {
     String var1="0";
