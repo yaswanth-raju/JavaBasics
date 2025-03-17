@@ -7,7 +7,9 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class EachCharacterCountInString {
+public class
+
+EachCharacterCountInString {
     public static void main(String[] args) {
         String str="Yaswanthraju";
         Map<Character, Long> countedMap = str.chars().mapToObj(obj -> (char) obj).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
