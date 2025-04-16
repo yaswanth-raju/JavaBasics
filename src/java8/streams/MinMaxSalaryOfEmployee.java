@@ -23,5 +23,6 @@ public class MinMaxSalaryOfEmployee {
         Employee employee = maxSalary.isPresent() ? maxSalary.get() : null;
         System.out.println("\n min salary = name = " + minSalaryEmp.getName() + " salary = " + minSalaryEmp.getSalary());
         System.out.println("\n max salary = name = " + employee.getName() + " salary = " + employee.getSalary());
+
     }
 }

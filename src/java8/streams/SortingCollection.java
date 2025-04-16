@@ -25,5 +25,4 @@ public class SortingCollection {
                 .sorted(salaryComparator)
                 .forEach(System.out::print);
     }
-
 }
