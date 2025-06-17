@@ -18,7 +18,7 @@ public class BiFunctionExample {
 
         String bifResult = bif
                             .andThen(toUpper)
-                            .apply(1, 2);
+                            .apply(10, 2);
         System.out.println(bifResult);
     }
 }

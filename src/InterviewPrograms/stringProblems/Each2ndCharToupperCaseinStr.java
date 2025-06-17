@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 public class Each2ndCharToupperCaseinStr {
     public static void main(String[] args) {
-//        solveWithJava8();
-        solveWithOutJava8();
+        solveWithJava8();
+//        solveWithOutJava8();    //OUTPUT:: hI yAswanth hOw aRe yOu ?
     }
 
     private static void solveWithOutJava8() {

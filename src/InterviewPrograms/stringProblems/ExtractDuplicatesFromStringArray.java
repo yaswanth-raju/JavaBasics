@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class ExtractDuplicatesFromStringArray {
+public class  ExtractDuplicatesFromStringArray {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("abca", "abaa", "abbo");
 //        list.stream().findFirst().get().chars().mapToObj(obj-> (char) obj).collect(Collectors.toMap(Function.identity(),Collectors.counting()));

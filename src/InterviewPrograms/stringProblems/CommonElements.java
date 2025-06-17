@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 public class CommonElements  {
     public static void main(String[] args) {
         String[] array1 = {"apple", "banana", "cherry", "date"};
-        String[] array2 = {"cherry", "date", "elderberry", "fig"};
+        String[] array2 = {"cherry", "date", "blueberry", "fig"};
 
-        // Convert arrays to lists
+
         List<String> list1 = Arrays.asList(array1);
         List<String> list2 = Arrays.asList(array2);
 
